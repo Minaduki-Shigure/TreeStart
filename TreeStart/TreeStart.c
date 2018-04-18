@@ -130,3 +130,22 @@ void BinTreePrint2(BinTreeNode *p, BinTreeNode *head)
 	}
 	return;
 }
+
+void swap(BinTreeNode **p1, BinTreeNode **p2)
+{
+	BinTreeNode *temp;
+	temp = *p2;
+	*p2 = *p1;
+	*p1 = temp;
+	return;
+}
+
+void ChildReverse(BinTreeNode **T)
+{
+	// 如果是叶子节点，则递归结束  
+	if (*T == NULL)
+		return;
+	swap(&((*T)->LChild), &((*T)->RChild)); // 直接使用swap交换函数比较方便，直接交换指针；  
+	ChildReverse(&((*T)->LChild));
+	ChildReverse(&((*T)->RChild));
+}

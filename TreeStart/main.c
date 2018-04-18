@@ -10,5 +10,9 @@ int main(void)
 	BinTreePrint2(head, head);
 	putchar('\n');
 	system("pause");
+	ChildReverse(&head);
+	BinTreePrint2(head, head);
+	putchar('\n');
+	system("pause");
 	return 0;
 }
