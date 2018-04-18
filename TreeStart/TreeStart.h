@@ -7,10 +7,12 @@ typedef char TElemType;
 
 typedef struct BinTreeNode{
 	TElemType data;
-	BinTreeNode *Parent;
-	BinTreeNode *LChild;
-	BinTreeNode *RChild;
+	struct BinTreeNode *Parent;
+	struct BinTreeNode *LChild;
+	struct BinTreeNode *RChild;
 }BinTreeNode;
 
+void wipe_cache(FILE *fp);
 BinTreeNode* BinTreeInit(void);
-int BinTreeBuild(BinTreeNode *p1, TElemType input);
+int BinTreeBuild(BinTreeNode **ptr, TElemType input);
+void BinTreePrint(BinTreeNode *p, BinTreeNode *head);
