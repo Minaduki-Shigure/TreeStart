@@ -14,5 +14,7 @@ typedef struct BinTreeNode{
 
 void wipe_cache(FILE *fp);
 BinTreeNode* BinTreeInit(void);
-int BinTreeBuild(BinTreeNode **ptr, TElemType input);
-void BinTreePrint(BinTreeNode *p, BinTreeNode *head);
+int BinTreeBuild(BinTreeNode *p1, TElemType input);
+void BinTreePrint0(BinTreeNode *p, BinTreeNode *head);
+void BinTreePrint1(BinTreeNode *p, BinTreeNode *head);
+void BinTreePrint2(BinTreeNode *p, BinTreeNode *head);

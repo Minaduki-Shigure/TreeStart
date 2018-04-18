@@ -43,7 +43,7 @@ BinTreeNode* BinTreeInit(void)
 			input = getche();
 		}
 	}
-	puts("Init Successful!");
+	puts("\nInit Successful!");
 	return head;
 }
 
@@ -88,16 +88,16 @@ int BinTreeBuild(BinTreeNode *p1, TElemType input)
 	}
 }
 
-void BinTreePrint(BinTreeNode *p,BinTreeNode *head)
+void BinTreePrint0(BinTreeNode *p,BinTreeNode *head)
 {
 	if (p)
 	{
 		if (p != head && p->data != '*')
 			putchar(p->data);
 		if (p->LChild)
-			BinTreePrint(p->LChild, head);
+			BinTreePrint0(p->LChild, head);
 		if (p->RChild)
-			BinTreePrint(p->RChild, head);
+			BinTreePrint0(p->RChild, head);
 	}
 	return;
 }

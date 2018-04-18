@@ -3,7 +3,7 @@
 int main(void)
 {
 	BinTreeNode *head = BinTreeInit();
-	BinTreePrint(head, head);
+	BinTreePrint0(head, head);
 	putchar('\n');
 	BinTreePrint1(head, head);
 	putchar('\n');
