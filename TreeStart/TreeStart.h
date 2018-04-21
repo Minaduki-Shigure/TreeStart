@@ -18,5 +18,5 @@ int BinTreeBuild(BinTreeNode *p1, TElemType input);
 void BinTreePrint0(BinTreeNode *p, BinTreeNode *head);
 void BinTreePrint1(BinTreeNode *p, BinTreeNode *head);
 void BinTreePrint2(BinTreeNode *p, BinTreeNode *head);
-void swap(BinTreeNode *p1, BinTreeNode *p2);
+void swap(BinTreeNode **p1, BinTreeNode **p2);
 void ChildReverse(BinTreeNode **T);
